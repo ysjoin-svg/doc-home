@@ -78,13 +78,13 @@ header h1{font-size:19px;font-weight:700;color:#1a3a2a;letter-spacing:1px;}
       <button onclick="search()">搜尋</button>
     </div>
     <div id="result"></div>
-    <p class="bridge-hint">※ 需在辦公室內網並執行橋接工具（<code>node ipos_bridge.js</code>）才能使用客戶查詢功能</p>
+    <p class="bridge-hint">※ 需確認 IPOS API 服務（125.229.26.140:3001）正在執行中</p>
   </div>
 </div>
 
 <script>
-// 橋接工具 API 位址（同一台機器或區網 IP）
-const BRIDGE = 'http://localhost:3001';
+// IPOS API 服務位址
+const BRIDGE = 'http://125.229.26.140:3001';
 
 async function search(){
   const q = document.getElementById('q').value.trim();
