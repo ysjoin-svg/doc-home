@@ -2,184 +2,139 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>永旭智慧財產 — 文件產生器</title>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: '微軟正黑體', 'Microsoft JhengHei', sans-serif;
-  background: #f0f2f5;
-  min-height: 100vh;
-}
-
-/* ── Header ── */
-header {
-  background: #fff;
-  border-bottom: 2px solid #e8e8e8;
-  padding: 12px 28px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.06);
-}
-header img {
-  height: 46px;
-  width: auto;
-  object-fit: contain;
-}
-header h1 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #1a3a2a;
-  letter-spacing: 1px;
-}
-
-/* ── Main ── */
-.wrap {
-  max-width: 860px;
-  margin: 48px auto;
-  padding: 0 20px;
-}
-
-.section-title {
-  font-size: 13px;
-  font-weight: 600;
-  color: #888;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-}
-
-/* ── 4 按鈕 ── */
-.btn-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  margin-bottom: 48px;
-}
-@media (max-width: 560px) {
-  .btn-grid { grid-template-columns: 1fr; }
-}
-
-.doc-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 36px 20px;
-  border-radius: 14px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform .15s, box-shadow .15s;
-  box-shadow: 0 2px 10px rgba(0,0,0,.08);
-  color: #fff;
-  font-family: inherit;
-}
-.doc-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0,0,0,.15);
-}
-.doc-btn:active { transform: translateY(0); }
-
-.doc-btn .icon { font-size: 40px; line-height: 1; }
-.doc-btn .label { font-size: 18px; font-weight: 700; letter-spacing: 1px; }
-.doc-btn .sub { font-size: 12px; opacity: .82; letter-spacing: .5px; }
-
-.btn-patent    { background: linear-gradient(135deg, #2c5f2e 0%, #4a8f3f 100%); }
-.btn-trademark { background: linear-gradient(135deg, #7d4e1f 0%, #b07030 100%); }
-.btn-copyright { background: linear-gradient(135deg, #1a4a7a 0%, #2e78c8 100%); }
-.btn-legal     { background: linear-gradient(135deg, #4a1a6a 0%, #8040b0 100%); }
-
-.coming-soon {
-  opacity: .7;
-  cursor: default;
-  position: relative;
-}
-.coming-soon::after {
-  content: '即將推出';
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  background: rgba(255,255,255,.25);
-  border-radius: 20px;
-  font-size: 11px;
-  padding: 2px 8px;
-  letter-spacing: .5px;
-}
-.coming-soon:hover { transform: none; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
-
-/* ── IPOS 搜尋提示 ── */
-.ipos-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 24px 28px;
-  box-shadow: 0 2px 10px rgba(0,0,0,.07);
-  border-left: 4px solid #1a5276;
-}
-.ipos-card h3 {
-  font-size: 15px;
-  color: #1a5276;
-  margin-bottom: 8px;
-}
-.ipos-card p {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.7;
-}
-.ipos-card code {
-  background: #f5f5f5;
-  border-radius: 4px;
-  padding: 1px 6px;
-  font-size: 12px;
-  color: #333;
-}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'微軟正黑體','Microsoft JhengHei',sans-serif;background:#f0f2f5;min-height:100vh;}
+header{background:#fff;border-bottom:2px solid #e8e8e8;padding:12px 28px;display:flex;align-items:center;gap:14px;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+header img{height:44px;width:auto;object-fit:contain;}
+header h1{font-size:19px;font-weight:700;color:#1a3a2a;letter-spacing:1px;}
+.wrap{max-width:880px;margin:40px auto;padding:0 20px;}
+.sec-title{font-size:12px;font-weight:600;color:#999;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;}
+.btn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:44px;}
+@media(max-width:540px){.btn-grid{grid-template-columns:1fr;}}
+.doc-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:34px 20px;border-radius:14px;border:none;cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s;box-shadow:0 2px 10px rgba(0,0,0,.08);color:#fff;font-family:inherit;}
+.doc-btn:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.15);}
+.doc-btn .icon{font-size:38px;line-height:1;}
+.doc-btn .label{font-size:18px;font-weight:700;letter-spacing:2px;}
+.doc-btn .sub{font-size:12px;opacity:.82;}
+.btn-patent{background:linear-gradient(135deg,#2c5f2e,#4a8f3f);}
+.btn-trademark{background:linear-gradient(135deg,#7d4e1f,#b07030);}
+.btn-copyright{background:linear-gradient(135deg,#1a4a7a,#2e78c8);}
+.btn-legal{background:linear-gradient(135deg,#4a1a6a,#8040b0);}
+.coming{opacity:.65;cursor:default;position:relative;}
+.coming::after{content:'即將推出';position:absolute;top:11px;right:13px;background:rgba(255,255,255,.22);border-radius:20px;font-size:11px;padding:2px 8px;}
+.coming:hover{transform:none;box-shadow:0 2px 10px rgba(0,0,0,.08);}
+.search-card{background:#fff;border-radius:12px;padding:24px 26px;box-shadow:0 2px 10px rgba(0,0,0,.07);}
+.search-card h3{font-size:15px;color:#1a5276;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #1a5276;}
+.search-row{display:flex;gap:10px;}
+.search-row input{flex:1;padding:10px 14px;border:1px solid #ccc;border-radius:7px;font-size:14px;font-family:inherit;}
+.search-row input:focus{outline:none;border-color:#1a5276;}
+.search-row button{padding:10px 22px;background:#1a5276;color:#fff;border:none;border-radius:7px;cursor:pointer;font-size:14px;font-family:inherit;white-space:nowrap;}
+.search-row button:hover{background:#154360;}
+#result{margin-top:18px;}
+.client-card{border:1px solid #d5e8d4;border-radius:9px;padding:16px 18px;margin-bottom:12px;background:#f8fff8;}
+.c-name{font-size:16px;font-weight:700;color:#1a5276;margin-bottom:8px;}
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px 16px;font-size:13px;color:#555;margin-bottom:12px;}
+.c-grid b{color:#333;}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;}
+.btn-open{border:none;border-radius:7px;padding:8px 16px;cursor:pointer;font-size:13px;font-family:inherit;color:#fff;}
+.btn-p{background:#2c5f2e;}.btn-p:hover{background:#1e4020;}
+.btn-t{background:#7d4e1f;}.btn-t:hover{background:#5a3815;}
+.loading,.empty{font-size:13px;padding:10px 0;color:#888;}
+.error{font-size:13px;padding:10px 0;color:#c0392b;}
+.bridge-hint{font-size:12px;color:#aaa;margin-top:10px;}
+.bridge-hint a{color:#1a5276;}
 </style>
 </head>
 <body>
-
 <header>
-  <img src="logo.jpg" alt="永旭 YSIPO Logo">
+  <img src="logo.jpg" alt="永旭 YSIPO">
   <h1>文件產生器</h1>
 </header>
-
 <div class="wrap">
-  <p class="section-title">選擇文件類型</p>
-
+  <p class="sec-title">選擇文件類型</p>
   <div class="btn-grid">
     <a class="doc-btn btn-patent" href="https://ysjoin-svg.github.io/patent-form/" target="_blank">
-      <span class="icon">📋</span>
-      <span class="label">專　利</span>
-      <span class="sub">委任書 · 契約書</span>
+      <span class="icon">📋</span><span class="label">專　利</span><span class="sub">委任書 · 契約書</span>
     </a>
     <a class="doc-btn btn-trademark" href="https://ysjoin-svg.github.io/trademark-form/" target="_blank">
-      <span class="icon">™</span>
-      <span class="label">商　標</span>
-      <span class="sub">委任書 · 契約書</span>
+      <span class="icon">™</span><span class="label">商　標</span><span class="sub">委任書 · 契約書</span>
     </a>
-    <span class="doc-btn btn-copyright coming-soon">
-      <span class="icon">©</span>
-      <span class="label">著 作 權</span>
-      <span class="sub">委任書 · 契約書</span>
+    <span class="doc-btn btn-copyright coming">
+      <span class="icon">©</span><span class="label">著 作 權</span><span class="sub">委任書 · 契約書</span>
     </span>
-    <span class="doc-btn btn-legal coming-soon">
-      <span class="icon">⚖️</span>
-      <span class="label">法　務</span>
-      <span class="sub">合約書 · 聲明書</span>
+    <span class="doc-btn btn-legal coming">
+      <span class="icon">⚖️</span><span class="label">法　務</span><span class="sub">合約書 · 聲明書</span>
     </span>
   </div>
 
-  <p class="section-title">搭配 IPOS 客戶資料</p>
-  <div class="ipos-card">
-    <h3>⚙ 自動帶入客戶資料</h3>
-    <p>
-      若需從 IPOS-001 系統搜尋客戶並自動填入表單，請在辦公室內電腦執行橋接工具：<br><br>
-      <code>node ipos_bridge.js</code><br><br>
-      啟動後開啟 <code>http://localhost:3001</code>，以 IPOS 帳號登入後即可搜尋客戶、一鍵帶入各產生器。
-    </p>
+  <p class="sec-title">搜尋客戶並帶入資料</p>
+  <div class="search-card">
+    <h3>⚙ IPOS 客戶查詢</h3>
+    <div class="search-row">
+      <input type="text" id="q" placeholder="輸入客戶名稱，例：羅和豐" onkeydown="if(event.key==='Enter')search()">
+      <button onclick="search()">搜尋</button>
+    </div>
+    <div id="result"></div>
+    <p class="bridge-hint">※ 需在辦公室內網並執行橋接工具（<code>node ipos_bridge.js</code>）才能使用客戶查詢功能</p>
   </div>
 </div>
 
+<script>
+// 橋接工具 API 位址（同一台機器或區網 IP）
+const BRIDGE = 'http://localhost:3001';
+
+async function search(){
+  const q = document.getElementById('q').value.trim();
+  if(!q){ alert('請輸入客戶名稱'); return; }
+  const div = document.getElementById('result');
+  div.innerHTML = '<p class="loading">搜尋中，請稍候⋯</p>';
+  try {
+    const res = await fetch(BRIDGE + '/api/search?q=' + encodeURIComponent(q));
+    const data = await res.json();
+    if(data.error){ div.innerHTML = '<p class="error">錯誤：' + data.error + '</p>'; return; }
+    if(!data.length){ div.innerHTML = '<p class="empty">找不到符合的客戶</p>'; return; }
+    div.innerHTML = data.map((c,i) => `
+      <div class="client-card">
+        <div class="c-name">${c.name||'—'} <small style="color:#aaa;font-size:12px">(${c.clientId||c.id||''})</small></div>
+        <div class="c-grid">
+          <span><b>統編/身分證：</b>${c.idNo||'—'}</span>
+          <span><b>電話：</b>${c.phone||c.mobile||'—'}</span>
+          <span><b>登記地址：</b>${c.regAddr||'—'}</span>
+          <span><b>負責人：</b>${c.rep||'—'}</span>
+          <span><b>發明人：</b>${(c.inventors||[]).map(v=>v.name).join('、')||'—'}</span>
+        </div>
+        <div class="btn-row">
+          <button class="btn-open btn-p" onclick="openForm('patent',${i})">📄 開啟專利文件產生器</button>
+          <button class="btn-open btn-t" onclick="openForm('trademark',${i})">™ 開啟商標文件產生器</button>
+        </div>
+      </div>
+    `).join('');
+    window._clients = data;
+  } catch(e) {
+    div.innerHTML = '<p class="error">無法連線橋接工具，請確認 ipos_bridge.js 已啟動</p>';
+  }
+}
+
+function openForm(type, idx){
+  const c = window._clients[idx];
+  const p = new URLSearchParams();
+  if(c.name) p.set('ipos_name', c.name);
+  if(c.rep) p.set('ipos_rep', c.rep);
+  if(c.idNo) p.set('ipos_id', c.idNo);
+  if(c.regAddr) p.set('ipos_addr', c.regAddr);
+  if(c.mobile) p.set('ipos_mobile', c.mobile);
+  if(c.phone) p.set('ipos_phone', c.phone);
+  if(c.inventors&&c.inventors[0]) p.set('ipos_inv_name', c.inventors[0].name);
+  if(c.idNo) p.set('ipos_inv_id', c.idNo);
+  if(!c.idNo||/^[A-Z]\d{9}$/i.test(c.idNo)) p.set('ipos_ind','true');
+  const base = type==='patent'
+    ? 'https://ysjoin-svg.github.io/patent-form/'
+    : 'https://ysjoin-svg.github.io/trademark-form/';
+  window.open(base + '?' + p.toString(), '_blank');
+}
+</script>
 </body>
 </html>
