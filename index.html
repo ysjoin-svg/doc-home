@@ -42,6 +42,8 @@ header h1{font-size:19px;font-weight:700;color:#1a3a2a;letter-spacing:1px;}
 .btn-open{border:none;border-radius:7px;padding:8px 16px;cursor:pointer;font-size:13px;font-family:inherit;color:#fff;}
 .btn-p{background:#2c5f2e;}.btn-p:hover{background:#1e4020;}
 .btn-t{background:#7d4e1f;}.btn-t:hover{background:#5a3815;}
+.btn-c{background:#1a4a7a;}.btn-c:hover{background:#133659;}
+.btn-l{background:#4a1a6a;}.btn-l:hover{background:#38104f;}
 .loading,.empty{font-size:13px;padding:10px 0;color:#888;}
 .error{font-size:13px;padding:10px 0;color:#c0392b;}
 .bridge-hint{font-size:12px;color:#aaa;margin-top:10px;}
@@ -62,12 +64,12 @@ header h1{font-size:19px;font-weight:700;color:#1a3a2a;letter-spacing:1px;}
     <a class="doc-btn btn-trademark" href="https://ysjoin-svg.github.io/trademark-form/" target="_blank">
       <span class="icon">™</span><span class="label">商　標</span><span class="sub">委任書 · 契約書</span>
     </a>
-    <span class="doc-btn btn-copyright coming">
-      <span class="icon">©</span><span class="label">著 作 權</span><span class="sub">委任書 · 契約書</span>
-    </span>
-    <span class="doc-btn btn-legal coming">
-      <span class="icon">⚖️</span><span class="label">法　務</span><span class="sub">合約書 · 聲明書</span>
-    </span>
+    <a class="doc-btn btn-copyright" href="https://ysjoin-svg.github.io/copyright-form/" target="_blank">
+      <span class="icon">©</span><span class="label">著 作 權</span><span class="sub">委任書 · 契約書 · 申請書</span>
+    </a>
+    <a class="doc-btn btn-legal" href="https://ysjoin-svg.github.io/law-form/" target="_blank">
+      <span class="icon">⚖️</span><span class="label">法　務</span><span class="sub">契約書</span>
+    </a>
   </div>
 
   <p class="sec-title">搜尋客戶並帶入資料</p>
@@ -109,6 +111,8 @@ async function search(){
         <div class="btn-row">
           <button class="btn-open btn-p" onclick="openForm('patent',${i})">📄 開啟專利文件產生器</button>
           <button class="btn-open btn-t" onclick="openForm('trademark',${i})">™ 開啟商標文件產生器</button>
+          <button class="btn-open btn-c" onclick="openForm('copyright',${i})">© 開啟著作權文件產生器</button>
+          <button class="btn-open btn-l" onclick="openForm('law',${i})">⚖️ 開啟法務文件產生器</button>
         </div>
       </div>
     `).join('');
@@ -132,7 +136,11 @@ function openForm(type, idx){
   if(!c.idNo||/^[A-Z]\d{9}$/i.test(c.idNo)) p.set('ipos_ind','true');
   const base = type==='patent'
     ? 'https://ysjoin-svg.github.io/patent-form/'
-    : 'https://ysjoin-svg.github.io/trademark-form/';
+    : type==='trademark'
+    ? 'https://ysjoin-svg.github.io/trademark-form/'
+    : type==='copyright'
+    ? 'https://ysjoin-svg.github.io/copyright-form/'
+    : 'https://ysjoin-svg.github.io/law-form/';
   window.open(base + '?' + p.toString(), '_blank');
 }
 </script>
